@@ -2,7 +2,7 @@ const rep = require('request-promise')
 
 async function main () {
   try {
-    const res = await rep.get('https://api.github.com/users', {
+    const res = await rep.get('https://api.github.com/', {
       rejectUnauthorized: false,
       resolveWithFullResponse: true,
       followAllRedirects: true
