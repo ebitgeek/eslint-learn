@@ -28,6 +28,7 @@
       { "code": 130, "ignoreRegExpLiterals": true }
     ],
     "no-tabs": "warn",
-    "indent": ["warn", 2]
+    "indent": ["warn", 2],
+    "no-mixed-spaces-and-tabs": "error"
   }
 }

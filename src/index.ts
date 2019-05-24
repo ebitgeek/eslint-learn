@@ -1,3 +1,7 @@
-import main from './main';
+import { GithubMan } from './main';
 
-main();
+// nimani();
+
+const githubMan: GithubMan = new GithubMan();
+
+githubMan.getUsers();
