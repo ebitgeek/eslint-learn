@@ -1,4 +1,4 @@
-import req = require('request-promise');
+import * as req from 'request-promise';
 
 async function main(): Promise<void> {
   const res: string = await req.get('https://api.github.com/users', { headers: { 'User-Agent': 'Chrome' } });
