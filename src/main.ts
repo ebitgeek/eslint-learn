@@ -10,7 +10,7 @@ async function nimani(): Promise<void> {
 }
 
 export class GithubMan {
-  private githubUsersUri: string = 'https://api.github.com/users';
+  protected githubUsersUri: string = 'https://api.github.com/users';
 
   public constructor(githubUsersUri?: string) {
     this.githubUsersUri = githubUsersUri || this.githubUsersUri;
@@ -30,6 +30,16 @@ export class GithubMan {
     console.log(JSON.parse(res));
     // eslint-disable-next-line no-console
     console.log(hehe);
+  }
+}
+export class GithubWoman extends GithubMan {
+  public constructor(githubUsersUri?: string){
+    super(githubUsersUri || undefined);
+  }
+
+  public async getUsers(): Promise<void> {
+    // eslint-disable-next-line no-console
+    console.log(this.githubUsersUri);
   }
 }
 

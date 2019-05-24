@@ -7,21 +7,23 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Current TS File",
+      "name": "TS-Node Tsc Debug",
       // "program": "${workspaceFolder}\\index.js"
-      "args": [
-        "${workspaceRoot}\\src\\index.ts"   
-      ],
-      "runtimeArgs": [
-          "--nolazy",
-          "-r",
-          "ts-node/register"
-      ],
+      "args": ["${workspaceRoot}\\src\\index.ts"],
+      "runtimeArgs": ["--nolazy", "-r", "ts-node/register"],
       "sourceMaps": true,
       "cwd": "${workspaceFolder}",
       "protocol": "inspector",
       "console": "integratedTerminal",
       "internalConsoleOptions": "openOnSessionStart"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "VSC Local Tsc Debug",
+      "program": "${workspaceFolder}\\src\\index.ts",
+      "preLaunchTask": "tsc: build - tsconfig.json",
+      "outFiles": ["${workspaceFolder}\\dist\\**/*.js"]
     }
   ]
 }
